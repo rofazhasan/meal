@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <h1>User Dashboard</h1>
+        <p id="balanceDisplay">Balance: </p>
+        
+        <div id="mealToggle">
+            <h3>Select Meals for Tomorrow</h3>
+            <label><input type="checkbox" id="breakfast" /> Breakfast</label>
+            <label><input type="checkbox" id="lunch" /> Lunch</label>
+            <label><input type="checkbox" id="dinner" /> Dinner</label>
+            <button onclick="submitMealPreferences()">Save Preferences</button>
+            <p id="mealMessage" class="message"></p>
+        </div>
+
+        <div id="expenseHistory">
+            <h3>Expense History</h3>
+            <ul id="expenseList">
+                <!-- Expense history will populate here -->
+            </ul>
+        </div>
+        <button onclick="getMealStatement()">Print Meal Statement</button>
+        <button onclick="checkUserBalance()">Check Balance</button>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

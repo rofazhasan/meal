@@ -1,0 +1,29 @@
+# docker-compose.yml
+
+version: "3.8"
+
+services:
+  app:
+    build: .
+    container_name: fastapi_app
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL = postgresql://mealdata_user:P4Nr4UKWJpQgr48xM38ruSZj4P9HxKfB@dpg-csdk4ijqf0us7394tlc0-a.oregon-postgres.render.com/mealdata
+    depends_on:
+      - db
+
+  db:
+    image: postgres:14
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: mealdata_user
+      POSTGRES_PASSWORD: P4Nr4UKWJpQgr48xM38ruSZj4P9HxKfB
+      POSTGRES_DB: mealdata
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

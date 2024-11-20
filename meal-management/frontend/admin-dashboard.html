@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <h1>Admin Dashboard</h1>
+        <div id="mealStatus">
+            <h3>Meal Status Overview</h3>
+            <ul id="userMealList">
+                <!-- Users' meal statuses will populate here -->
+            </ul>
+        </div>
+
+        <div id="fundManagement">
+            <h3>Fund Management</h3>
+            <input type="text" id="userId" placeholder="User ID" required>
+            <input type="number" id="fundAmount" placeholder="Amount" required>
+            <button onclick="addFunds()">Add Funds</button>
+            <p id="fundMessage" class="message"></p>
+        </div>
+
+        <div id="priceSettings">
+            <h3>Set Meal Prices</h3>
+            <input type="number" id="breakfastPrice" placeholder="Breakfast Price" required>
+            <input type="number" id="lunchPrice" placeholder="Lunch Price" required>
+            <input type="number" id="dinnerPrice" placeholder="Dinner Price" required>
+            <button onclick="setMealPrices()">Set Prices</button>
+            <p id="priceMessage" class="message"></p>
+            <button onclick="getMealStatement()">Print Meal Statement</button>
+            <button onclick="checkUserBalance()">Check Balance</button>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
