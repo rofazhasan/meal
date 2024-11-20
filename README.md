@@ -1,6 +1,6 @@
-Meal Management App 🥗
+## Meal Management App 🥗
 
-A web-based application for managing daily meals efficiently, designed for dormitories, hostels, or shared living spaces. This app simplifies meal tracking, fund management, and reporting for both admins and users.
+A **web-based application** for managing daily meals efficiently, designed for dormitories, hostels, or shared living spaces. This app simplifies meal tracking, fund management, and reporting for both admins and users.
 
 ---
 
@@ -52,8 +52,7 @@ A web-based application for managing daily meals efficiently, designed for dormi
 
 1. **Clone the Repository**  
    ```bash
-   git clone https://github.com/your-username/meal-management.git
-   cd meal-management
+   git clone https://github.com/rofazhasan/meal-management.git
    ```
 
 2. **Set Up Virtual Environment**  
